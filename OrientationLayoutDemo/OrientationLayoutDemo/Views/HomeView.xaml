@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:OrientationLayoutDemo.Behavior"
+             x:Class="OrientationLayoutDemo.Views.HomeView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.Behaviors>
+                <behavior:OrientationBehavior OrientationCommand="{Binding OrientationCommand}"/>
+            </Grid.Behaviors>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Message}" 
+           VerticalOptions="CenterAndExpand" 
+           HorizontalOptions="CenterAndExpand"/>
+            <ContentView ControlTemplate="{DynamicResource OrientationTemplate}" Grid.Row="1"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

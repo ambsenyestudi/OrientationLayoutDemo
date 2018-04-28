@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ControlTemplate xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrientationLayoutDemo.Views.Template.Horizontal.HomeHorizontalTpl">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="140"/>
+            </Grid.RowDefinitions>
+            <Label Text="Left Section" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <BoxView BackgroundColor="Red" Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="140"/>
+            </Grid.RowDefinitions>
+            <Label Text="Right Section" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+            <BoxView BackgroundColor="Navy"  Grid.Row="1"/>
+        </Grid>
+    </Grid>
+
+</ControlTemplate>
